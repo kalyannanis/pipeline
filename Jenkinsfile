@@ -1,7 +1,7 @@
 node {
 
   stage(SCM){
-      git 'https://github.com/kalyannanis/pipeline.git' 
+      git 'https://github.com/kalyannanis/springpet' 
   }
   stage(build the packages){
     
