@@ -1,13 +1,17 @@
+
 version: 0.2
+
 phases:
+  install:
+    runtime-versions:
+      java: corretto11
   build:
     commands:
-      - echo Build started on 'data'
-      - mvn test
+      - mvn clean install
   post_build:
     commands:
-      - echo build completed on 'data'
-      - mvn package
+      - echo Build completed
 artifacts:
   files:
-    - taget/pipeline.war
+    - target/pipeline.war
+  discard-paths: yes
